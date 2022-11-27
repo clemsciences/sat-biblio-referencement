@@ -210,7 +210,7 @@ Nouveaux ouvrages, B. 1996, 994 -
 Situation, B.2003, 22.
 Biens de l'Association - B.2003, 42.
 Bilan triennal d'activité - B.1997, 41 sq
-PublishedWork - Evolution, B.1999, 704 ; B.2001, 3.
+PublishedWorksData - Evolution, B.1999, 704 ; B.2001, 3.
 Bureau de la Société, B.1994, 7; B.1996, 992;
 B.1997, 7, 41 ; B.2000, 7.
 Comité de publication, B. 1994, 7; B.1996, 992,
