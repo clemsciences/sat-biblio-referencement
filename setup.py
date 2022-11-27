@@ -12,7 +12,7 @@ with io.open(os.path.join(CURDIR, "README.md"), "r", encoding="utf-8") as f:
 setup(
     name='sat-biblio-referencement',
     version='1.0.0',
-    packages=['sat-biblio-referencement'],
+    packages=['sat_biblio_referencement'],
     url='https://github.com/clemsciences/sat-biblio-referencement',
     license='',
     author='clemsciences',
