@@ -1,7 +1,6 @@
 import os
 import io
-from setuptools import setup
-
+from setuptools import setup, find_packages
 
 CURDIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -12,7 +11,7 @@ with io.open(os.path.join(CURDIR, "README.md"), "r", encoding="utf-8") as f:
 setup(
     name='sat-biblio-referencement',
     version='1.0.0',
-    packages=['sat_biblio_referencement'],
+    packages=find_packages(),
     url='https://github.com/clemsciences/sat-biblio-referencement',
     license='',
     author='clemsciences',

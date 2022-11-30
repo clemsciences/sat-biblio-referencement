@@ -1,8 +1,9 @@
+import os
 
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import sessionmaker
 
-
+from sat_biblio_referencement import DATABASE_DIRECTORY
 from sat_biblio_referencement.database import *
 
 
@@ -16,7 +17,7 @@ class DatabaseManager:
         if self.in_memory:
             self.engine = create_engine("sqlite:///:memory:", echo=self.is_echo)
         else:
-            self.engine = create_engine("sqlite:///ici.db", echo=self.is_echo)
+            self.engine = create_engine(f"sqlite:///{os.path.join(DATABASE_DIRECTORY, 'ici.db')}", echo=self.is_echo)
         self.connection = self.engine.connect()
         self.metadata = MetaData()
 
