@@ -9,4 +9,7 @@ class PublicationEntriesDB(Base):
     text = Column(String)
     named_entity_id = Column(Integer, ForeignKey("named_entities.id_"), nullable=False)
 
+    def __repr__(self):
+        return f"<PublicationEntriesDB>(id_={self.id_}, text='{self.text}', named_entitiy_id={self.named_entity_id})"
+
 
