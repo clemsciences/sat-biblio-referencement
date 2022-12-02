@@ -26,7 +26,8 @@ for filename in sorted_filenames:
     pages.extend([split_page(page) for page in text.split("\n\n") if page])
 
 
-dbm = DatabaseManager(in_memory=False, is_echo=False, path=os.path.join(DATABASE_DIRECTORY, TABLE_PUBLICATION_2004_FILENAME))
+dbm = DatabaseManager(in_memory=False, is_echo=False,
+                      path=os.path.join(DATABASE_DIRECTORY, TABLE_PUBLICATION_2004_FILENAME))
 dbm.prepare()
 with Session(dbm.engine) as session:
     for i, page in enumerate(pages):

@@ -10,3 +10,7 @@ class NamedEntitiesDB(Base):
     type_ = Column(String)
     standard_value = Column(String)
     description = Column(String)
+
+    def __repr__(self):
+        return f"<NamedEntitiesDB(id={self.id_}, name={self.name}, type_={self.type_}, " \
+               f"standard_value={self.standard_value}, description={self.description})>"

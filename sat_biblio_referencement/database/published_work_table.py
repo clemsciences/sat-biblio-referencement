@@ -18,6 +18,10 @@ class PublishedWorksDB(Base):
     title = Column(String, default="")
     publication_type = Column(String, default="")
 
+    def __repr__(self):
+        return f"<PublishedWorksDB(id_={self.id_}, year={self.year}, " \
+               f"publication_type={self.publication_type})>"
+
 
 class PublishedWorkPagesDB(Base):
     """
@@ -34,6 +38,10 @@ class PublishedWorkPagesDB(Base):
     page_number = Column(Integer, nullable=True)
     publication_entry_id = Column(Integer, ForeignKey("publication_entries.id_"), nullable=False)
 
+    def __repr__(self):
+        return f"<PublishedWorkPagesDB(id_={self.id_}, published_work_id={self.published_work_id}," \
+               f" text='{self.text}', page_number={self.page_number}, publication_entry_id={self.publication_entry_id}>"
+
 
 class PublishedWorkArticlesDB(Base):
     __tablename__ = "published_work_articles"
@@ -43,3 +51,8 @@ class PublishedWorkArticlesDB(Base):
     title = Column(String, default="vide")
     page_number_start = Column(Integer, nullable=False)
     page_number_end = Column(Integer, nullable=False)
+
+    def __repr__(self):
+        return f"<PublishedWorkArticlesDB(id_={self.id_}, published_work_id={self.published_work_id}," \
+               f" title='{self.title}', page_number_start={self.page_number_start}," \
+               f" page_number_end={self.page_number_end})>"
