@@ -2,6 +2,9 @@ from sat_biblio_referencement.database.published_work_table import PublishedWork
     PublishedWorkArticlesDB
 
 
+__author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
+
+
 class PublishedWorksData:
 
     @staticmethod

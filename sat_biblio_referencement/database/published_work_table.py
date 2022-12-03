@@ -3,12 +3,16 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sat_biblio_referencement import Base
 
 
+__author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
+
+
 class PublishedWorksDB(Base):
     """
     :param id_:
     :param publication_type: 'bulletin', 'memoire'
     :param year:
     :param title:
+    :param publication_type:
 
     """
     __tablename__ = "published_works"
@@ -26,9 +30,11 @@ class PublishedWorksDB(Base):
 class PublishedWorkPagesDB(Base):
     """
     :param id_:
-    :param bulletin_id:
+    :param published_work_id:
     :param text:
-    :
+    :param page_number:
+    :param publication_entry_id:
+
     """
     __tablename__ = "published_work_pages"
     __table_args__ = {'sqlite_autoincrement': True}
@@ -44,6 +50,9 @@ class PublishedWorkPagesDB(Base):
 
 
 class PublishedWorkArticlesDB(Base):
+    """
+
+    """
     __tablename__ = "published_work_articles"
     __table_args__ = {'sqlite_autoincrement': True}
     id_ = Column(Integer, primary_key=True)

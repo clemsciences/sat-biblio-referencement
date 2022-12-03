@@ -2,6 +2,9 @@ from sqlalchemy import Column, Integer, String
 from sat_biblio_referencement import Base
 
 
+__author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
+
+
 class NamedEntitiesDB(Base):
     __tablename__ = "named_entities"
     __table_args__ = {'sqlite_autoincrement': True}

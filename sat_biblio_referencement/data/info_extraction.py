@@ -4,6 +4,9 @@ import re
 from sat_biblio_referencement.data.abbreviations import Abbreviations
 
 
+__author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
+
+
 class Extractor:
 
     @staticmethod

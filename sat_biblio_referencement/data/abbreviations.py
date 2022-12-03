@@ -1,5 +1,8 @@
 
 
+__author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
+
+
 class Abbreviations:
     B = "B."
     M = "M."

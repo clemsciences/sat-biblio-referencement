@@ -1,9 +1,11 @@
-import os
 
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import sessionmaker
 
 from sat_biblio_referencement.database import *
+
+
+__author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
 
 
 class DatabaseManager:

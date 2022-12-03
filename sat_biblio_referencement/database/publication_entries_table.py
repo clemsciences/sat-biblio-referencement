@@ -2,6 +2,9 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sat_biblio_referencement import Base
 
 
+__author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
+
+
 class PublicationEntriesDB(Base):
     __tablename__ = "publication_entries"
     __table_args__ = {'sqlite_autoincrement': True}

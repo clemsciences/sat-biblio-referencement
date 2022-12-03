@@ -2,6 +2,9 @@ from sat_biblio_referencement.database.named_entities_table import NamedEntities
 from sat_biblio_referencement.database.publication_entries_table import PublicationEntriesDB
 
 
+__author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
+
+
 class PublicationEntriesData:
 
     @staticmethod
