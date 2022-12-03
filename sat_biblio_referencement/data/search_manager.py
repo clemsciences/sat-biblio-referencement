@@ -16,6 +16,11 @@ __author__ = ["Clément Besnier <clem@clementbesnier.fr>"]
 class SearchManager:
 
     @staticmethod
+    def search_near_named_entities(db_session: Session, query: str) -> List:
+        results = SearchManager.search_approximate(db_session, query)
+        return [ne_db.standard_value for ne_db in results]
+
+    @staticmethod
     def search(db_session: Session, query: str) -> List[NamedEntitiesDB]:
         """
         >>> db = DatabaseManager(False, False, os.path.join(DATABASE_DIRECTORY, TABLE_PUBLICATION_2004_FILENAME))
