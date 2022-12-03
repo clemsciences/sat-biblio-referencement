@@ -1,4 +1,4 @@
 lxml
 jupyter
-SQLAlchemy
+SQLAlchemy==1.3.22
 requests
