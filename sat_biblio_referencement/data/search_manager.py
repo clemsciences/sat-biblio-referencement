@@ -17,6 +17,16 @@ class SearchManager:
 
     @staticmethod
     def search_near_named_entities(db_session: Session, query: str) -> List:
+        """
+        >>> db = DatabaseManager(False, False, os.path.join(DATABASE_DIRECTORY, TABLE_PUBLICATION_2004_FILENAME))
+        >>> db.prepare()
+        >>> SearchManager.search_near_named_entities(Session(db.engine), "Bléré")
+        ['Bléré', ' Public. : "Bléré et son canton", B.1997, 350']
+
+        :param db_session:
+        :param query:
+        :return:
+        """
         results = SearchManager.search_approximate(db_session, query)
         return [ne_db.standard_value for ne_db in results]
 
