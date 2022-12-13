@@ -1,5 +1,5 @@
 
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, JSON
 from sat_biblio_referencement import Base
 
 
@@ -21,10 +21,12 @@ class PublishedWorksDB(Base):
     year = Column(String, nullable=False)
     title = Column(String, default="")
     publication_type = Column(String, default="")
+    resources = Column(JSON, default="{}")
 
     def __repr__(self):
         return f"<PublishedWorksDB(id_={self.id_}, year={self.year}, " \
-               f"publication_type={self.publication_type})>"
+               f"publication_type={self.publication_type}," \
+               f"resources={self.resources})>"
 
 
 class PublishedWorkPagesDB(Base):
@@ -43,10 +45,12 @@ class PublishedWorkPagesDB(Base):
     text = Column(String, default="")
     page_number = Column(Integer, nullable=True)
     publication_entry_id = Column(Integer, ForeignKey("publication_entries.id_"), nullable=False)
+    resources = Column(JSON, default="{}")
 
     def __repr__(self):
         return f"<PublishedWorkPagesDB(id_={self.id_}, published_work_id={self.published_work_id}," \
-               f" text='{self.text}', page_number={self.page_number}, publication_entry_id={self.publication_entry_id}>"
+               f" text='{self.text}', page_number={self.page_number}, publication_entry_id={self.publication_entry_id}," \
+               f" resources={self.resources}>"
 
 
 class PublishedWorkArticlesDB(Base):
